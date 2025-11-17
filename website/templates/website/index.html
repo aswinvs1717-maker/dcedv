@@ -1,0 +1,40 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="content">
+  <div class="text">
+    <h1 id="hi">Hello</h1>
+    <h1>I'm Aswin Sasi</h1>
+    <h2>And I'm a <span>Full Stack Developer</span></h2>
+    <p>I am a passionate Full Stack Developer specializing in building responsive, scalable, and efficient web applications using modern technologies.</p>
+
+
+
+    <div class="btn">
+      <a href="{% url 'contact' %}"><button class="btn">Contact me</button></a>
+    </div>
+  </div>
+
+
+  <!-- ✅ Correct static image syntax -->
+  <div class="a17">
+    <img src="{% static 'img/a17.jpg' %}" alt="Aswin Sasi">
+  </div>
+</div>
+
+<!-- ===== About Section ===== -->
+<section id="about" class="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a passionate <strong>Full Stack Developer</strong> specializing in building responsive, scalable,
+      and efficient web applications. I work with modern frontend and backend technologies to deliver complete
+      solutions that combine clean design with strong functionality. With expertise in JavaScript, Python, Django,
+      and SQL/NoSQL databases, I enjoy solving complex problems and creating smooth user experiences.
+    </p>
+  </div>
+</section>
+
+{% include 'website/_skills_section.html' %}
+{% endblock %}

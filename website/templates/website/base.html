@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Portfolio{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <!-- ✅ Single Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="{% url 'home' %}">Portfolio</a></div>
+    <ul class="nav-links">
+      <li><a href="{% url 'home' %}"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+      <li><a href="{% url 'projects' %}"><ion-icon name="folder-outline"></ion-icon> Projects</a></li>
+      <li><a href="{% url 'skills' %}"><ion-icon name="code-slash-outline"></ion-icon> Skills</a></li>
+      <li><a href="{% url 'contact' %}"><ion-icon name="mail-outline"></ion-icon> Contact</a></li>
+    </ul>
+
+      <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      ☰
+    </div>
+  </nav>
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  {% block content %}{% endblock %}
+  <!-- ===== Footer Section ===== -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="social-icons">
+      <a href="https://wa.me/qr/W6EC2IQ2IOCUE1"><ion-icon name="logo-whatsapp"></ion-icon></a>
+      <a href="https://github.com/yourusername"><ion-icon name="logo-github"></ion-icon></a>
+      <a href="https://www.instagram.com/aswin1.7?igsh=dWJjMXhkNHJyMDY2"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="https://linkedin.com/in/yourprofile"><ion-icon name="logo-linkedin"></ion-icon></a>
+    </div>
+
+    <p>© 2025 Aswin Sasi | All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

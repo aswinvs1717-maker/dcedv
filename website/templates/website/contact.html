@@ -1,0 +1,39 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<!-- ===== Contact Section ===== -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>CONTACT ME</h2>
+    <p>If you’d like to work together or just say hello, drop me a message.</p>
+
+    <form method="POST" action="{% url 'contact' %}">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- ✅ SweetAlert Integration -->
+  {% if messages %}
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    {% for message in messages %}
+      Swal.fire({
+        icon: '{% if message.tags == "success" %}success{% else %}error{% endif %}',
+        title: '{% if message.tags == "success" %}Thank You!{% else %}Error!{% endif %}',
+        text: '{{ message }}',
+        confirmButtonColor: '#f5b301',
+        background: '#111',
+        color: '#fff',
+        iconColor: '#f5b301'
+      });
+    {% endfor %}
+  </script>
+  {% endif %}
+</section>
+{% endblock %}

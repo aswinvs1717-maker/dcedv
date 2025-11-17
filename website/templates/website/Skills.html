@@ -1,0 +1,51 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Skills{% endblock %}
+{% block content %}
+{% include 'website/_skills_section.html' %}
+{% endblock %}
+
+<section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title">MY SKILLS</h2>
+    <div class="skills-grid">
+
+      <div class="skill-card">AA
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Bootstrap</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <ul>
+          <li>Python (Django)</li>
+          <li>Numpy</li>
+          <li>Pandas</li>
+          <li>Rest Framework</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Databases</h3>
+        <ul><li>MySQL</li></ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Other Tools</h3>
+        <ul>
+          <li>Git</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
