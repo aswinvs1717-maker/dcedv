@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = '6cef445265dc30a0c6d84f58c71d398a'
 DEBUG = True
-ALLOWED_HOSTS = ['frf-aor4.onrender.com']
+ALLOWED_HOSTS = ['https://dcedv.onrender.com']
 
 
 INSTALLED_APPS = [
@@ -70,3 +70,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'aswinvs@zohomail.in'
 EMAIL_HOST_PASSWORD = 'TkJMSjaVzfdi'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
